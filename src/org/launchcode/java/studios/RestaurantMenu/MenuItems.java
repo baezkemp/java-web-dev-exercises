@@ -24,10 +24,6 @@ public class MenuItems {
         return price;
     }
 
-    public double setPrice(double price) {
-        this.price = price;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -38,10 +34,6 @@ public class MenuItems {
 
     public boolean getNewItem() {
         return newItem;
-    }
-
-    public boolean setNewItem(boolean newItem){
-        this.newItem = newItem;
     }
 
 }

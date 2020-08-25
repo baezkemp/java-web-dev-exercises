@@ -16,12 +16,11 @@ public class Menu {
         return dateUpdated;
     }
 
-    public Date setDateUpdated(Date dateUpdated) {
-        this.dateUpdated = dateUpdated;
-    }
-
     public static void main(String[] args) {
+        MenuItems bakedPotato = new MenuItems("Baked Potato", "Not a raw potato", "Appetizer", 5.99, true);
+        MenuItems chickenNoodleSoup = new MenuItems("Chicken Soup", "Noodle Soup", "Appetizer", 5.99, false);
 
+        System.out.println(bakedPotato.getNewItem());
     }
 
 }
