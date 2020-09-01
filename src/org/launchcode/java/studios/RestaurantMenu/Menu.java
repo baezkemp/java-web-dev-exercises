@@ -4,23 +4,35 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Menu {
-    private ArrayList<MenuItems> foodStuff;
+    private ArrayList<MenuItems> MyMenu;
     private Date dateUpdated;
 
-    public Menu(Date dateUpdate){
+    public Menu(Date dateUpdate, ArrayList<MenuItems> item){
         this.dateUpdated = dateUpdate;
-        this.foodStuff = new ArrayList<>();
+        this.MyMenu = item;
     }
 
-    public Date getDateUpdated() {
+    public void addItem(MenuItems item){
+        if(!MyMenu.contains(item)) {
+            MyMenu.add(item);
+            this.dateUpdated = new Date();
+        } else {
+            System.out.println("Alert: " + item + " is already on the menu.");
+        }
+    }
+
+    public void removeItem(MenuItems item){
+        MyMenu.remove(item);
+    }
+    public Date getLastUpdated(){
         return dateUpdated;
     }
 
-    public static void main(String[] args) {
-        MenuItems bakedPotato = new MenuItems("Baked Potato", "Not a raw potato", "Appetizer", 5.99, true);
-        MenuItems chickenNoodleSoup = new MenuItems("Chicken Soup", "Noodle Soup", "Appetizer", 5.99, false);
-
-        System.out.println(bakedPotato.getNewItem());
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "items=" + MyMenu +
+                ", dateUpdated=" + dateUpdated +
+                '}';
     }
-
 }
