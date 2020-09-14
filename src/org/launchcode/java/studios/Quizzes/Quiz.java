@@ -7,10 +7,7 @@ public class Quiz {
     private ArrayList<Question> myQuiz;
     int grade = 0;
 
-    public Quiz() {
-        this.myQuiz = myQuiz;
-        this.grade = grade;
-    }
+    public Quiz() {}
 
     public void QuizBuilder () {
         ArrayList<String> answerOptions = new ArrayList<>(Arrays.asList("True", "False"));
